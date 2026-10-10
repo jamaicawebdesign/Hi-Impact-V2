@@ -15,13 +15,13 @@ export const AboutSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-14">
           <div className="text-xs font-bold uppercase tracking-wider text-[#b89225] mb-3">
-            About Hi-Impact Group of Companies
+            About Hi-Impact Shipping Co.
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#081533] leading-tight mb-5 text-balance">
-            Engineered for Precision, Resilience, and Unbroken Supply Chain Velocity
+            With over26  years of experience in the shipping and Customs Industry
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            As the flagship logistics enterprise of the Hi-Impact Group of Companies, we lead with innovation and operational excellence, connecting the Caribbean and global trade corridors across 140+ sovereign ports.
+            At HI- Impact Shipping & Co., we are dedicated to providing reliable,efficient and personalized logistics solutions for all. With over26  years of experience in the shipping and Customs Industry, our mission is to simplify the process of sending  your goods to Jamaica safely and timely.
           </p>
         </div>
 
