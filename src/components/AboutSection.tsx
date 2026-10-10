@@ -26,7 +26,9 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Mission Statement & Vision Statement Showcase */}
-        <div className="relative p-7 sm:p-9 rounded-2xl bg-gradient-to-br from-[#081533] via-[#0a1b42] to-[#040d22] border-2 border-[#d4af37]/70 shadow-xl flex flex-col justify-between group hover:border-[#d4af37] transition-all duration-300">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Mission Card */}
+          <div className="relative p-7 sm:p-9 rounded-2xl bg-gradient-to-br from-[#081533] via-[#0a1b42] to-[#040d22] border-2 border-[#d4af37]/70 shadow-xl flex flex-col justify-between group hover:border-[#d4af37] transition-all duration-300">
             <div>
               <div className="flex items-center gap-3.5 mb-5">
                 <div className="w-11 h-11 rounded-xl bg-[#d4af37]/20 text-[#d4af37] flex items-center justify-center font-bold shadow-md shadow-[#d4af37]/15">
