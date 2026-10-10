@@ -26,45 +26,29 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Mission Statement & Vision Statement Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Mission Card */}
-          {/* Mission Statement Showcase - Split View */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
-  {/* Left Column: Mission Information */}
-  <div className="relative p-7 sm:p-9 rounded-2xl bg-gradient-to-br from-[#081533] via-[#0a1b42] to-[#040d22] border-2 border-[#d4af37]/70 shadow-xl flex flex-col justify-between group hover:border-[#d4af37] transition-all duration-300 h-full">
-    <div>
-      <div className="flex items-center gap-3.5 mb-5">
-        <div className="w-11 h-11 rounded-xl bg-[#d4af37]/20 text-[#d4af37] flex items-center justify-center font-bold shadow-md shadow-[#d4af37]/15">
-          <Target className="w-6 h-6 stroke-[2.2]" />
-        </div>
-        <div>
-          <div className="text-[11px] font-bold uppercase tracking-wider text-[#d4af37]">
-            Hi-Impact Group of Companies
+        <div className="relative p-7 sm:p-9 rounded-2xl bg-gradient-to-br from-[#081533] via-[#0a1b42] to-[#040d22] border-2 border-[#d4af37]/70 shadow-xl flex flex-col justify-between group hover:border-[#d4af37] transition-all duration-300">
+            <div>
+              <div className="flex items-center gap-3.5 mb-5">
+                <div className="w-11 h-11 rounded-xl bg-[#d4af37]/20 text-[#d4af37] flex items-center justify-center font-bold shadow-md shadow-[#d4af37]/15">
+                  <Target className="w-6 h-6 stroke-[2.2]" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#d4af37]">
+                    Hi-Impact Group of Companies
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Our Mission</h3>
+                </div>
+              </div>
+              <blockquote className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal italic">
+                &ldquo;At Hi-Impact, our mission is to lead with innovation, integrity, and excellence across all our businesses. We are committed to creating value for our clients, employees, and communities by delivering high-quality solutions and fostering sustainable growth. Rooted in Jamaican culture and values, we aim to make a positive, lasting impact in every sector we operate in, contributing to the advancement of our nation and the well-being of all.&rdquo;
+              </blockquote>
+            </div>
+            <div className="mt-8 pt-4 border-t border-[#172c5a] flex items-center justify-between text-xs">
+              <span className="text-[#d4af37] font-semibold">Innovation · Integrity · Excellence</span>
+              <span className="text-slate-300 font-medium">Rooted in Jamaica 🇯🇲</span>
+            </div>
           </div>
-          <h3 className="text-xl font-bold text-white">Our Mission</h3>
-        </div>
-      </div>
-      <blockquote className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal italic">
-        &ldquo;At Hi-Impact, our mission is to lead with innovation, integrity, and excellence across all our businesses. We are committed to creating value for our clients, employees, and communities by delivering high-quality solutions and fostering sustainable growth. Rooted in Jamaican culture and values, we aim to make a positive, lasting impact in every sector we operate in, contributing to the advancement of our nation and the well-being of all.&rdquo;
-      </blockquote>
-    </div>
-    <div className="mt-8 pt-4 border-t border-[#172c5a] flex items-center justify-between text-xs">
-      <span className="text-[#d4af37] font-semibold">Innovation · Integrity · Excellence</span>
-      <span className="text-slate-300 font-medium">Rooted in Jamaica 🇯🇲</span>
-    </div>
-  </div>
 
-  {/* Right Column: Image */}
-  <div className="relative w-full h-full min-h-[320px] sm:min-h-[400px] rounded-2xl overflow-hidden border-2 border-[#d4af37]/70 shadow-xl group hover:border-[#d4af37] transition-all duration-300">
-    <img
-      src="/images/mission-image.jpg" /* Replace with your actual image path */
-      alt="Hi-Impact Group Mission"
-      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-    />
-    {/* Subtle dark gradient overlay to match aesthetic */}
-    <div className="absolute inset-0 bg-gradient-to-t from-[#040d22]/80 via-transparent to-transparent pointer-events-none" />
-  </div>
-</div>
 
           {/* Vision Card */}
           <div className="relative p-7 sm:p-9 rounded-2xl bg-gradient-to-br from-[#081533] via-[#0a1b42] to-[#040d22] border-2 border-[#d4af37]/40 shadow-xl flex flex-col justify-between group hover:border-[#d4af37] transition-all duration-300">
