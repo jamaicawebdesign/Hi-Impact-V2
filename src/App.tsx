@@ -3,7 +3,6 @@ import { Navbar } from './components/Navbar';
 import { HeroSlider } from './components/HeroSlider';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
-import { BlogSection } from './components/BlogSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
@@ -13,7 +12,7 @@ export default function App() {
 
   // IntersectionObserver to accurately track the active section for sticky navigation
   useEffect(() => {
-    const sectionIds = ['home', 'about', 'services', 'blog', 'contact'];
+    const sectionIds = ['home', 'about', 'services', 'contact'];
     const sections = sectionIds.map((id) => document.getElementById(id));
 
     const observer = new IntersectionObserver(
@@ -65,10 +64,7 @@ export default function App() {
         {/* Section 3: Our Multimodal Services & Corridors */}
         <ServicesSection onSelectServiceQuote={handleSelectServiceQuote} />
 
-        {/* Section 4: Blog & Market Intelligence Analysis */}
-        <BlogSection />
-
-        {/* Section 5: Modern Contact Form & Rate Calculator */}
+        {/* Section 4: Modern Contact Form & Rate Calculator */}
         <ContactSection initialService={selectedQuoteService} />
       </main>
 

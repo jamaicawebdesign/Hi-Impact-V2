@@ -72,183 +72,163 @@ export interface ShipmentTrackRecord {
 
 export const HERO_SLIDES: HeroSlide[] = [
   {
-    id: 'ocean-freight',
-    title: 'Precision Global Ocean Freight & Container Logistics',
-    subtitle: 'Scheduled Liner Services Across 140+ Sovereign Port Terminals',
-    description: 'Direct oceanic transit lines with guaranteed vessel space allocations, real-time container IoT tracking, and optimized trade corridor scheduling.',
+    id: 'pre-clearance',
+    title: 'Fast-Track Customs Pre-Clearance & Wharf Release',
+    subtitle: 'Electronic ASYCUDA World Clearance with Jamaica Customs Agency',
+    description: 'Advance manifest processing, duty calculations, and electronic pre-clearance at Kingston Wharves and KCT so your cargo is released immediately upon docking.',
     image: heroOceanImg,
-    category: 'Maritime Cargo',
-    highlightStat: '4.8M TEU',
-    highlightLabel: 'Annual Ocean Volume Handled',
-    primaryAction: 'Request Freight Quote',
+    category: 'Customs Pre-Clearance',
+    highlightStat: '100% Digital',
+    highlightLabel: 'ASYCUDA Advance Filing',
+    primaryAction: 'Request Pre-Clearance',
     primaryHref: '#contact',
-    secondaryAction: 'Explore Ocean Services',
+    secondaryAction: 'Explore Services',
     secondaryHref: '#services',
   },
   {
-    id: 'air-freight',
-    title: 'Expedited Air Freight & Dedicated Charter Solutions',
-    subtitle: 'Time-Critical International Air Cargo with 24–48h Transit Windows',
-    description: 'Consolidated air cargo networks and dedicated charter flights for high-value machinery, perishables, and mission-critical industrial supply chains.',
+    id: 'air-cargo',
+    title: 'Expedited Air Cargo & Express Aviation Logistics',
+    subtitle: 'Daily Inbound Flights to Norman Manley & Sangster Airports',
+    description: 'Time-critical air freight connections into Kingston from Miami, New York, Atlanta, Toronto, and London with rapid customs clearance.',
     image: heroAirImg,
-    category: 'Aviation Logistics',
+    category: 'Air Cargo Logistics',
     highlightStat: '24-48 hrs',
-    highlightLabel: 'Express Hub-to-Hub Transit',
-    primaryAction: 'Book Urgent Air Cargo',
+    highlightLabel: 'Express Transit Window',
+    primaryAction: 'Book Air Cargo',
     primaryHref: '#contact',
-    secondaryAction: 'View Flight Corridors',
+    secondaryAction: 'View Services',
     secondaryHref: '#services',
   },
   {
-    id: 'road-freight',
-    title: 'Intermodal Overland Haulage & Cross-Border Freight',
-    subtitle: 'Seamless Rail-to-Road Connectivity & Heavy-Duty Fleet Logistics',
-    description: 'Nationwide and transcontinental freight hauling powered by telematics-equipped carrier fleets, heavy-lift transport, and temperature-controlled reefer trailers.',
+    id: 'haulage',
+    title: 'Heavy Container Haulage & Wharf Drayage Fleet',
+    subtitle: 'Reliable 20ft & 40ft Container Hauling Islandwide Across Jamaica',
+    description: 'Dedicated prime movers and skeletal chassis providing swift port pullout from Kingston Wharves and KCT directly to your warehouse or project site.',
     image: heroRoadImg,
-    category: 'Overland Haulage',
-    highlightStat: '99.4%',
-    highlightLabel: 'On-Time Linehaul Reliability',
-    primaryAction: 'Calculate Overland Rates',
+    category: 'Container Haulage',
+    highlightStat: 'Islandwide',
+    highlightLabel: 'All Parishes Connected',
+    primaryAction: 'Book Container Haulage',
     primaryHref: '#contact',
-    secondaryAction: 'Explore Intermodal',
+    secondaryAction: 'Haulage Specs',
     secondaryHref: '#services',
   },
   {
-    id: 'logistics-hub',
-    title: 'Smart Automated Warehousing & Cross-Dock Distribution',
-    subtitle: 'High-Bay Automated Storage with Real-Time Inventory Visibility',
-    description: 'Strategically located bonded warehouses offering automated pick-and-pack, temperature-monitored holding, and expedited port-adjacent cross-docking.',
+    id: 'door-to-door-vehicles',
+    title: 'Door to Door Delivery & Motor Vehicle Clearance',
+    subtitle: 'Turnkey Personal & Commercial Cargo Solutions Across All 14 Parishes',
+    description: 'Seamless pickup, ocean/air shipping, Trade Board & Customs valuation, and secure flatbed or truck delivery straight to your doorstep.',
     image: heroHubImg,
-    category: 'Contract Logistics',
-    highlightStat: '3.2M sq ft',
-    highlightLabel: 'Bonded Warehouse Capacity',
-    primaryAction: 'Inquire Storage Solutions',
+    category: 'Door to Door & Vehicles',
+    highlightStat: 'All 14',
+    highlightLabel: 'Parishes Delivered Direct',
+    primaryAction: 'Get Rate Quote',
     primaryHref: '#contact',
-    secondaryAction: 'Explore Facilities',
-    secondaryHref: '#about',
+    secondaryAction: 'Explore All Services',
+    secondaryHref: '#services',
   },
 ];
 
 export const SHIPPING_SERVICES: ShippingService[] = [
   {
-    id: 'ocean-freight',
-    title: 'Ocean Freight (FCL & LCL)',
-    tagline: 'Reliable containerized maritime transport across premier global trade routes.',
-    description: 'Whether you require dedicated Full Container Load (FCL) bookings or flexible Less than Container Load (LCL) consolidation, our carrier agreements provide vessel capacity and fixed scheduling even during peak seasons.',
+    id: 'pre-clearance',
+    title: 'Customs Pre-Clearance',
+    tagline: 'Fast-track electronic customs pre-clearance with Jamaica Customs Agency.',
+    description: 'Accelerate your cargo release before your vessel or aircraft touches down in Jamaica. Our certified customs specialists submit electronic manifests through ASYCUDA World, process duties, verify compliance, and secure advance wharf release so your cargo bypasses port demurrage and holding delays.',
     details: [
-      'Standard Dry Van, High-Cube, Open Top & Flat Rack containers',
-      'Port-to-port, door-to-port, and end-to-end door-to-door transit',
-      'Consolidation hubs in major transshipment ports (Singapore, Rotterdam, Ningbo)',
-      'Digital Bill of Lading (e-BL) and automated customs clearance filing'
+      'ASYCUDA World electronic pre-manifest submission and automated tariff classification',
+      'Advance duty calculation, GCT compliance, and Jamaica Customs Agency fee processing',
+      'Direct coordination with Kingston Wharves, Kingston Container Terminal (KCT), and Montego Bay',
+      'Expedited clearance for commercial shipments, personal effects, and barrel consignments'
     ],
     specs: {
-      transitTime: '12 - 32 Days (corridor dependent)',
-      capacity: 'Up to 24,000 TEU per vessel',
-      coverage: '140+ Direct Global Commercial Ports',
-      bestFor: 'High-volume manufactured goods, raw commodities & retail inventories'
+      transitTime: 'Electronic pre-release prior to vessel/flight arrival',
+      capacity: 'Full commercial declarations, personal effects & barrels',
+      coverage: 'Kingston Wharves (KWL), Port Bustamante & Norman Manley Airport (KIN)',
+      bestFor: 'Commercial importers, retail distributors, manufacturers & returning residents'
     },
-    features: ['Weekly Guaranteed Departures', 'Real-Time Container GPS Tracking', 'Direct Carrier Vessel Allocation'],
-    icon: 'Ship',
-  },
-  {
-    id: 'air-cargo',
-    title: 'International Air Freight',
-    tagline: 'Time-critical global air transport when speed and precision are paramount.',
-    description: 'We orchestrate direct flight allocations and consolidated space on premier commercial wide-body freighters and private charters for urgent automotive parts, electronics, and aerospace components.',
-    details: [
-      'Next-Flight-Out (NFO) and deferred economy consolidated schedules',
-      'Full and part aircraft chartering for out-of-gauge equipment',
-      'Airport tarmac ramp supervision and direct priority transfer',
-      'Hazardous material (IATA DGR certified) and lithium battery handling'
-    ],
-    specs: {
-      transitTime: '24 - 72 Hours',
-      capacity: 'Up to 110 Tonnes payload per chartered widebody',
-      coverage: '380+ International Cargo Airports',
-      bestFor: 'High-value electronics, pharmaceuticals, aerospace & urgent samples'
-    },
-    features: ['IATA Licensed Cargo Agent', 'Customs Pre-Clearance Airborne', 'Door-to-Airport Delivery Sprints'],
-    icon: 'Plane',
-  },
-  {
-    id: 'intermodal-rail-road',
-    title: 'Intermodal Truck & Rail Haulage',
-    tagline: 'Cost-effective inland connectivity combining heavy rail and modern trucking.',
-    description: 'Bridge the critical miles between maritime seaports, rail ramps, and inland distribution centers with our high-density intermodal network and company-operated carrier fleet.',
-    details: [
-      'Dedicated drayage from marine terminals and railheads',
-      'FTL (Full Truckload) and LTL (Less Than Truckload) dry van service',
-      'Double-stack intermodal rail corridors for fuel efficiency',
-      'Heavy-haul and oversized specialized multi-axle permits'
-    ],
-    specs: {
-      transitTime: '1 - 5 Days domestic / cross-border',
-      capacity: 'Up to 45,000 lbs standard / 80,000 lbs permitted',
-      coverage: 'Comprehensive North American & European Intermodal Corridors',
-      bestFor: 'Continental distribution, port drayage & plant-to-hub moves'
-    },
-    features: ['Telematics Fleet Tracking', '24/7 Dispatch Control', 'Cross-Border Bonded Transit'],
-    icon: 'Truck',
-  },
-  {
-    id: 'cold-chain',
-    title: 'Temperature-Controlled Cold Chain',
-    tagline: 'Unbroken active thermal management for perishables and biotech logistics.',
-    description: 'Maintain strict thermal integrity from loading to final handover. Our modern reefer containers and refrigerated trailers feature dual-redundant cooling units and autonomous IoT data loggers.',
-    details: [
-      'Deep-frozen (-25°C), chilled (+2°C to +8°C), and controlled ambient (+15°C to +25°C)',
-      'Continuous calibrated temperature data loggers with cellular uplink',
-      'GDP (Good Distribution Practice) certified for bio-pharma and APIs',
-      'Pre-trip reefer inspections and backup nitrogen refrigeration options'
-    ],
-    specs: {
-      transitTime: 'Configured per freight mode (Air/Ocean/Road)',
-      capacity: '40ft High-Cube Reefers & 53ft Refrigerated Trailers',
-      coverage: 'Global cold-chain certified port terminals & air hubs',
-      bestFor: 'Biopharmaceuticals, vaccines, fresh produce, seafood & dairy'
-    },
-    features: ['Continuous IoT Telemetry', 'GDP Pharma Compliance', 'Active Pre-Trip Calibrated Units'],
-    icon: 'ThermometerSnowflake',
-  },
-  {
-    id: 'customs-brokerage',
-    title: 'Customs Clearance & Trade Compliance',
-    tagline: 'Seamless border clearance and automated tariff classification advisory.',
-    description: 'Avoid costly border demurrage and compliance penalties. Our licensed in-house customs brokers manage harmonized tariff codes (HTS), duty optimization, and preferential trade agreements.',
-    details: [
-      'Automated manifest filing (AMS, ISF 10+2, ICS2) prior to vessel departure',
-      'Duty drawback, foreign trade zone (FTZ) entries, and bonded warehousing',
-      'C-TPAT and AEO security audit support and compliance consulting',
-      'Free Trade Agreement (FTA) origin documentation and valuation certification'
-    ],
-    specs: {
-      transitTime: '< 24 Hours standard electronic pre-release',
-      capacity: 'Unlimited commercial declaration throughput',
-      coverage: 'Major ports of entry across USA, EU, UK, and East Asia',
-      bestFor: 'Importers, exporters, multi-tier supply chains & cross-border trade'
-    },
-    features: ['Licensed In-House Brokers', 'Electronic Pre-Clearance (ISF/AMS)', 'Tariff Classification Auditing'],
+    features: ['ASYCUDA World Electronic Pre-Filing', 'Zero-Delay Wharf Release', 'Licensed Jamaica Customs Specialists'],
     icon: 'ShieldCheck',
   },
   {
-    id: 'warehousing-fulfillment',
-    title: 'Smart Warehousing & 3PL Distribution',
-    tagline: 'Strategic port-adjacent facilities with automated inventory management.',
-    description: 'Position your cargo next to high-volume container terminals. Our smart warehouse facilities offer bonded holding, container devanning, pallet cross-docking, and B2B fulfillment.',
+    id: 'door-to-door',
+    title: 'Door to Door Delivery',
+    tagline: 'End-to-end logistics from overseas origin straight to your doorstep islandwide.',
+    description: 'Complete peace-of-mind delivery from international suppliers, warehouses, or personal senders straight to your business, warehouse, or residence in Jamaica. We handle overseas collection, international transport, customs clearance, and final-mile delivery right to your door.',
     details: [
-      'Modern high-bay selective pallet racking and automated guided vehicles (AGV)',
-      'Real-time WMS integration with API and EDI data feeds',
-      'Bonded container freight stations (CFS) for duty-deferred storage',
-      'Value-added services: labeling, shrink-wrapping, kitting, and QC inspection'
+      'Islandwide delivery network covering all 14 parishes across Jamaica',
+      'Careful handling of barrels, commercial cartons, wooden crates, and palletized cargo',
+      'Automated dispatch updates and scheduled residential/commercial delivery appointments',
+      'Professional two-person delivery teams with liftgate trucks for safe offloading'
     ],
     specs: {
-      transitTime: 'Same-day receiving and cross-dock dispatch',
-      capacity: 'Over 3.2 Million sq ft across 12 strategic gateway hubs',
-      coverage: 'Gateways adjacent to Port of LA/Long Beach, Rotterdam, Hamburg, Singapore',
-      bestFor: 'Seasonal inventory buffers, e-commerce staging & container transloading'
+      transitTime: 'Scheduled weekly delivery runs across all 14 parishes',
+      capacity: 'From individual barrels and boxes to multi-pallet consignments',
+      coverage: 'All 14 Parishes (Kingston, St. Andrew, Montego Bay, St. Catherine, Mandeville & beyond)',
+      bestFor: 'Retail businesses, returning residents, overseas family parcels & e-commerce'
     },
-    features: ['Port-Adjacent Gateways', 'API/EDI Inventory Connect', 'Bonded CFS Storage'],
-    icon: 'Building2',
+    features: ['Islandwide All-14 Parish Reach', 'Complete Turnkey Port-to-Door Delivery', 'Dedicated Offloading Crews'],
+    icon: 'Boxes',
+  },
+  {
+    id: 'haulage',
+    title: 'Container Haulage & Drayage',
+    tagline: 'Heavy-duty container transport, wharf drayage, and inland freight haulage.',
+    description: 'Dependable container haulage moving 20ft, 40ft, and 45ft ocean containers seamlessly from Kingston Wharves and KCT terminals directly to client sites, factories, and warehouses across Jamaica. Equipped with reliable heavy-duty prime movers, skeletal chassis, and flatbeds.',
+    details: [
+      'Direct wharf drayage from Kingston Container Terminal (KCT) and Kingston Wharves Ltd (KWL)',
+      'Movement of 20ft, 40ft Dry Van containers and 40ft High-Cube refrigerated reefers',
+      'Live-unload delivery and flexible drop-and-pick container staging at your premises',
+      'Oversized machinery, construction steel, and heavy project cargo transport'
+    ],
+    specs: {
+      transitTime: 'Same-day port pullout and scheduled inland delivery',
+      capacity: 'Up to 65,000 lbs payload per haulage unit / Multi-axle chassis',
+      coverage: 'Industrial corridors, construction sites & distribution facilities islandwide',
+      bestFor: 'Manufacturing plants, construction developers, hardware distributors & shipping lines'
+    },
+    features: ['Modern Heavy Tractor Fleet & Chassis', 'Wharf Interchange Priority Pullout', 'GPS Fleet Tracking & Route Security'],
+    icon: 'Truck',
+  },
+  {
+    id: 'air-cargo',
+    title: 'Expedited Air Cargo',
+    tagline: 'Rapid commercial air cargo and express freight into Norman Manley & Sangster Airports.',
+    description: 'When timing is critical, Hi Impact Shipping provides fast, dependable air freight connections into Jamaica from North America, the Caribbean, Europe, and Asia. From urgent commercial spare parts and medical supplies to high-priority cartons and personal cargo.',
+    details: [
+      'Daily scheduled flight inbound connections into Norman Manley (KIN) and Sangster (MBJ)',
+      'Express courier cartons, consolidated air freight, and oversized palletized cargo',
+      'Ramp supervision, bonded airport sorting, and immediate customs inspection handover',
+      'Temperature-sensitive medical supplies, urgent electronics, and perishable goods handling'
+    ],
+    specs: {
+      transitTime: '24 - 48 Hours express transit / Daily commercial flight schedules',
+      capacity: 'Individual packages up to multi-ton consolidated air cargo',
+      coverage: 'Miami, Fort Lauderdale, New York, Atlanta, Toronto, London ⇄ Kingston, Jamaica',
+      bestFor: 'Urgent commercial inventory, medical supplies, automotive spare parts & electronics'
+    },
+    features: ['Daily Inbound Flight Schedules', 'Norman Manley Airport (KIN) Ramp Priority', '24–48h Express Turnaround'],
+    icon: 'Plane',
+  },
+  {
+    id: 'motor-vehicle-clearance',
+    title: 'Motor Vehicle Clearance',
+    tagline: 'Customs clearance, valuation assessment, Trade Board permits, and wharf release.',
+    description: 'Expert, hassle-free clearance for motor cars, SUVs, commercial trucks, buses, motorcycles, and heavy machinery arriving at Jamaican ports. We guide you through the entire Jamaica Customs Agency importation process—including Trade Board import permit verification, C78 declaration, valuation assessment, and licensing release.',
+    details: [
+      'Full documentation validation: Bill of Lading, Title/Certificate of Origin, and Trade Board Permit',
+      'Jamaica Customs Agency (JCA) C78 valuation assessment, CIF duty, and Environmental Levy calculation',
+      'Wharf inspection coordination, wharfage fee settlement, and secure port gate release passes',
+      'Tilt-tray flatbed towing and drive-away delivery from Kingston Wharves direct to your location'
+    ],
+    specs: {
+      transitTime: 'Expedited 24 - 48 Hour port clearance upon vessel discharge',
+      capacity: 'Sedans, SUVs, Commercial Vans, Heavy Trucks & Industrial Machinery',
+      coverage: 'Kingston Wharves (Port Bustamante) & Montego Bay Port',
+      bestFor: 'Auto dealerships, private vehicle buyers, returning residents & fleet operators'
+    },
+    features: ['Accurate JCA Tariff & Duty Valuation', 'Trade Board Import Permit Support', 'Port Gate Release & Flatbed Delivery'],
+    icon: 'Car',
   },
 ];
 

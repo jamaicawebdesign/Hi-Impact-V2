@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { 
-  Ship, 
-  Plane, 
-  Truck, 
-  ThermometerSnowflake, 
-  ShieldCheck, 
-  Building2, 
+  ShieldCheck,
+  Boxes,
+  Truck,
+  Plane,
+  Car,
   ArrowRight, 
   Check, 
   X, 
   Clock, 
-  Boxes, 
   Compass, 
   FileCheck
 } from 'lucide-react';
@@ -25,18 +23,18 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
   const getServiceIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Ship':
-        return <Ship className="w-5 h-5 text-[#d4af37]" />;
-      case 'Plane':
-        return <Plane className="w-5 h-5 text-[#d4af37]" />;
-      case 'Truck':
-        return <Truck className="w-5 h-5 text-[#d4af37]" />;
-      case 'ThermometerSnowflake':
-        return <ThermometerSnowflake className="w-5 h-5 text-[#d4af37]" />;
       case 'ShieldCheck':
         return <ShieldCheck className="w-5 h-5 text-[#d4af37]" />;
+      case 'Boxes':
+        return <Boxes className="w-5 h-5 text-[#d4af37]" />;
+      case 'Truck':
+        return <Truck className="w-5 h-5 text-[#d4af37]" />;
+      case 'Plane':
+        return <Plane className="w-5 h-5 text-[#d4af37]" />;
+      case 'Car':
+        return <Car className="w-5 h-5 text-[#d4af37]" />;
       default:
-        return <Building2 className="w-5 h-5 text-[#d4af37]" />;
+        return <ShieldCheck className="w-5 h-5 text-[#d4af37]" />;
     }
   };
 
@@ -62,14 +60,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <div className="text-xs font-bold uppercase tracking-wider text-[#b89225] mb-3">
-              Comprehensive Logistics Capabilities
+              Our Core Services &amp; Logistics Capabilities
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#081533] leading-tight">
-              Multimodal Freight Services Tailored to Global Supply Chains
+              Comprehensive Shipping, Haulage &amp; Customs Solutions
             </h2>
           </div>
           <p className="text-sm sm:text-base text-slate-600 max-w-md leading-relaxed">
-            From single pallet LCL air freight to chartered vessel breakbulk projects, we provide scheduled capacity, door-to-door visibility, and customs compliance across all major commercial shipping lanes.
+            Headquartered in Kingston, Jamaica, Hi Impact Shipping provides end-to-end cargo handling—from pre-clearance and expedited air cargo to heavy container haulage, door-to-door islandwide delivery, and motor vehicle clearance.
           </p>
         </div>
 
@@ -158,31 +156,31 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
             <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-xs">
-              <div className="text-xs text-[#b89225] font-bold mb-1">Trans-Pacific Loop</div>
-              <div className="text-sm font-bold text-[#081533]">Shanghai ⇄ Los Angeles</div>
-              <div className="mt-2 text-xs text-slate-600 font-mono">Ocean FCL: 14–16 Days</div>
+              <div className="text-xs text-[#b89225] font-bold mb-1">Florida Express Corridor</div>
+              <div className="text-sm font-bold text-[#081533]">Miami / Fort Lauderdale ⇄ Kingston</div>
+              <div className="mt-2 text-xs text-slate-600 font-mono">Ocean Freight: 3–4 Days</div>
+              <div className="text-xs text-slate-600 font-mono">Air Cargo: 24 Hours</div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-xs">
+              <div className="text-xs text-[#b89225] font-bold mb-1">US Tri-State Corridor</div>
+              <div className="text-sm font-bold text-[#081533]">New York / New Jersey ⇄ Kingston</div>
+              <div className="mt-2 text-xs text-slate-600 font-mono">Ocean Freight: 5–6 Days</div>
               <div className="text-xs text-slate-600 font-mono">Air Cargo: 24–36 Hours</div>
             </div>
 
             <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-xs">
-              <div className="text-xs text-[#b89225] font-bold mb-1">Asia-Europe Loop</div>
-              <div className="text-sm font-bold text-[#081533]">Singapore ⇄ Rotterdam</div>
-              <div className="mt-2 text-xs text-slate-600 font-mono">Ocean FCL: 22–26 Days</div>
-              <div className="text-xs text-slate-600 font-mono">Air Cargo: 28–48 Hours</div>
+              <div className="text-xs text-[#b89225] font-bold mb-1">UK &amp; European Route</div>
+              <div className="text-sm font-bold text-[#081533]">London / Southampton ⇄ Kingston</div>
+              <div className="mt-2 text-xs text-slate-600 font-mono">Ocean Freight: 12–14 Days</div>
+              <div className="text-xs text-slate-600 font-mono">Air Cargo: 48 Hours</div>
             </div>
 
             <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-xs">
-              <div className="text-xs text-[#b89225] font-bold mb-1">Trans-Atlantic Loop</div>
-              <div className="text-sm font-bold text-[#081533]">Hamburg ⇄ New York</div>
-              <div className="mt-2 text-xs text-slate-600 font-mono">Ocean FCL: 9–11 Days</div>
-              <div className="text-xs text-slate-600 font-mono">Air Cargo: 18–24 Hours</div>
-            </div>
-
-            <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-xs">
-              <div className="text-xs text-[#b89225] font-bold mb-1">Continental Intermodal</div>
-              <div className="text-sm font-bold text-[#081533]">Long Beach ⇄ Dallas Hub</div>
-              <div className="mt-2 text-xs text-slate-600 font-mono">Double Rail: 3–4 Days</div>
-              <div className="text-xs text-slate-600 font-mono">Expedited Team: 32 Hours</div>
+              <div className="text-xs text-[#b89225] font-bold mb-1">Islandwide Haulage</div>
+              <div className="text-sm font-bold text-[#081533]">Kingston Wharves ⇄ All 14 Parishes</div>
+              <div className="mt-2 text-xs text-slate-600 font-mono">Wharf Pullout: Same-Day</div>
+              <div className="text-xs text-slate-600 font-mono">Door Delivery: 24–48 Hours</div>
             </div>
           </div>
         </div>

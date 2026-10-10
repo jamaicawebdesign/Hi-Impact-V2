@@ -7,10 +7,11 @@ import {
   Phone, 
   Mail, 
   MapPin, 
-  Ship, 
   Plane, 
   Truck, 
-  ThermometerSnowflake, 
+  Car,
+  ShieldCheck,
+  Boxes,
   Clock, 
   Copy, 
   Check, 
@@ -26,13 +27,23 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
   
   // Quote Form State
   const [quoteData, setQuoteData] = useState({
-    mode: initialService?.includes('Air') ? 'Air Cargo' : initialService?.includes('Intermodal') ? 'Intermodal Truck' : 'Ocean FCL',
-    origin: 'Shanghai (CNSHA)',
-    destination: 'Rotterdam (NLRTM)',
-    cargoType: 'Standard Dry Commercial Goods',
+    mode: initialService?.includes('Pre') 
+      ? 'Pre-Clearance' 
+      : initialService?.includes('Door') 
+      ? 'Door to Door' 
+      : initialService?.includes('Haulage') 
+      ? 'Haulage' 
+      : initialService?.includes('Air') 
+      ? 'Air Cargo' 
+      : initialService?.includes('Vehicle') 
+      ? 'Vehicle Clearance' 
+      : 'Pre-Clearance',
+    origin: 'Miami, FL (Port of Miami / KIN Hub)',
+    destination: 'Kingston, Jamaica',
+    cargoType: 'Commercial Goods & Cargo',
     containerType: "40' High Cube Container",
-    weightKg: '18500',
-    volumeCbm: '65',
+    weightKg: '2500',
+    volumeCbm: '15',
     targetDate: '2026-05-15',
     customsRequired: true,
     insuranceRequired: true,
@@ -49,7 +60,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
     company: '',
     email: '',
     phone: '',
-    department: 'Customer Operations & Tracking',
+    department: 'Pre-Clearance & Jamaica Customs Desk',
     subject: '',
     message: ''
   });
@@ -66,37 +77,39 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
 
   const [copiedId, setCopiedId] = useState(false);
 
-  // Common international trade gateways for fast selection
+  // Common trade gateways for fast selection
   const popularPorts = [
-    'Shanghai (CNSHA)',
-    'Rotterdam (NLRTM)',
-    'Singapore (SGSIN)',
-    'Los Angeles (USLAX)',
-    'Hamburg (DEHAM)',
-    'Dubai (AEDXB)',
-    'Frankfurt Cargo Hub (FRA)',
-    'Chicago O\'Hare (ORD)',
+    'Kingston Wharves (KWL)',
+    'Kingston Container Terminal (KCT)',
+    'Norman Manley Airport (KIN)',
+    'Miami / Fort Lauderdale, FL',
+    'New York / New Jersey Port',
+    'Montego Bay Wharves',
+    'London / Southampton, UK',
+    'Toronto / Montreal, Canada',
   ];
 
   // Dynamic cost estimator
   const calculateEstimate = () => {
-    const weight = parseFloat(quoteData.weightKg) || 1000;
+    const weight = parseFloat(quoteData.weightKg) || 500;
     const mode = quoteData.mode;
-    let base = 2800;
+    let base = 650;
     if (mode === 'Air Cargo') {
-      base = Math.max(1800, weight * 4.2);
-    } else if (mode === 'Ocean FCL') {
-      base = quoteData.containerType.includes('40') ? 3450 : 2100;
-    } else if (mode === 'Ocean LCL') {
-      base = Math.max(450, (parseFloat(quoteData.volumeCbm) || 5) * 110);
-    } else if (mode === 'Cold Chain Reefer') {
-      base = 4900;
+      base = Math.max(280, weight * 4.5);
+    } else if (mode === 'Pre-Clearance') {
+      base = 350;
+    } else if (mode === 'Door to Door') {
+      base = 580;
+    } else if (mode === 'Haulage') {
+      base = quoteData.containerType?.includes('40') ? 1250 : 850;
+    } else if (mode === 'Vehicle Clearance') {
+      base = 950;
     } else {
-      base = 1850;
+      base = 500;
     }
 
-    if (quoteData.customsRequired) base += 350;
-    if (quoteData.insuranceRequired) base += 220;
+    if (quoteData.customsRequired) base += 250;
+    if (quoteData.insuranceRequired) base += 120;
 
     return `$${Math.round(base).toLocaleString('en-US')}`;
   };
@@ -250,8 +263,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
                 <h3 className="text-2xl font-bold text-[#081533] mb-2">
                   Request Dispatched to Carrier Desk
                 </h3>
-                <p className="text-sm text-slate-600 max-w-md mx-auto mb-6">
+                <p className="text-sm text-slate-600 max-w-md mx-auto mb-2">
                   Your freight inquiry has been assigned to a Hi Impact Shipping trade lane manager. A binding commercial quote with spot tariff rate will be emailed within 2 hours.
+                </p>
+                <p className="text-xs text-slate-500 mb-6">
+                  For immediate assistance, contact our Kingston desk at <a href="tel:8765780508" className="text-[#081533] font-semibold hover:text-[#b89225] underline">(876) 578-0508</a> / <a href="tel:8764707066" className="text-[#081533] font-semibold hover:text-[#b89225] underline">(876) 470-7066</a> or <a href="mailto:hiimpactshipping@outlook.com" className="text-[#081533] font-semibold hover:text-[#b89225] underline">hiimpactshipping@outlook.com</a>.
                 </p>
 
                 <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 p-4 bg-white border border-slate-200 rounded-lg text-left mb-6 max-w-lg mx-auto w-full shadow-sm">
@@ -300,11 +316,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                     {[
-                      { label: 'Ocean FCL', icon: Ship },
-                      { label: 'Ocean LCL', icon: Ship },
+                      { label: 'Pre-Clearance', icon: ShieldCheck },
+                      { label: 'Door to Door', icon: Boxes },
+                      { label: 'Haulage', icon: Truck },
                       { label: 'Air Cargo', icon: Plane },
-                      { label: 'Intermodal Truck', icon: Truck },
-                      { label: 'Cold Chain Reefer', icon: ThermometerSnowflake },
+                      { label: 'Vehicle Clearance', icon: Car },
                     ].map((item) => {
                       const Icon = item.icon;
                       const isSelected = quoteData.mode === item.label;
@@ -560,11 +576,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
                       onChange={(e) => setInquiryData({ ...inquiryData, department: e.target.value })}
                       className="w-full px-3.5 py-2.5 text-sm bg-slate-50 border border-slate-300 rounded-lg text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#d4af37] font-medium"
                     >
-                      <option value="Customer Operations & Tracking">Customer Operations &amp; Tracking</option>
-                      <option value="Customs Brokerage & Compliance">Customs Brokerage &amp; Compliance</option>
-                      <option value="Port Terminal Billing & Demurrage">Port Terminal Billing &amp; Demurrage</option>
-                      <option value="Dedicated Air Cargo Charters">Dedicated Air Cargo Charters</option>
-                      <option value="Enterprise Carrier Alliances">Enterprise Carrier Alliances</option>
+                      <option value="Pre-Clearance & Jamaica Customs Desk">Pre-Clearance &amp; Customs Desk</option>
+                      <option value="Door to Door Delivery & Logistics">Door to Door Delivery &amp; Logistics</option>
+                      <option value="Container Haulage & Wharf Drayage">Container Haulage &amp; Wharf Drayage</option>
+                      <option value="Expedited Air Cargo Desk">Expedited Air Cargo Desk</option>
+                      <option value="Motor Vehicle Clearance & Valuation">Motor Vehicle Clearance &amp; Valuation</option>
                     </select>
                   </div>
 
@@ -617,35 +633,45 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
             
             <div className="bg-[#081533] border-2 border-[#d4af37]/60 rounded-2xl p-6 sm:p-7 shadow-xl text-white">
               <h3 className="text-base font-bold text-white mb-4 pb-2 border-b border-[#172c5a] flex items-center justify-between">
-                <span>24/7 Global Dispatch</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#d4af37] bg-[#d4af37]/20 px-2 py-0.5 rounded">Active</span>
+                <span>Direct Contact &amp; Dispatch</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#d4af37] bg-[#d4af37]/20 px-2 py-0.5 rounded">Kingston, Jamaica</span>
               </h3>
               
               <div className="space-y-4 text-xs">
                 <div>
-                  <div className="text-slate-300 mb-0.5">Maritime Commercial Hotline:</div>
-                  <div className="font-mono text-sm font-bold text-white flex items-center gap-2">
+                  <div className="text-slate-300 mb-0.5 font-medium">Primary Dispatch &amp; Operations:</div>
+                  <a href="tel:8765780508" className="font-mono text-sm font-bold text-white hover:text-[#d4af37] transition-colors flex items-center gap-2">
                     <Phone className="w-3.5 h-3.5 text-[#d4af37]" />
-                    +1 (800) 489-2240
-                  </div>
-                  <div className="text-[11px] text-slate-400 mt-0.5">Available 24/7 across all global timezones</div>
+                    (876) 578-0508
+                  </a>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Maritime, Air &amp; Overland Logistics</div>
                 </div>
 
                 <div>
-                  <div className="text-slate-300 mb-0.5">Air Cargo Charter Desk:</div>
-                  <div className="font-mono text-sm font-bold text-white flex items-center gap-2">
-                    <Plane className="w-3.5 h-3.5 text-[#d4af37]" />
-                    +1 (800) 489-2249
-                  </div>
-                  <div className="text-[11px] text-slate-400 mt-0.5">Urgent AOG &amp; Dedicated Charter Operations</div>
+                  <div className="text-slate-300 mb-0.5 font-medium">Commercial &amp; Customer Support:</div>
+                  <a href="tel:8764707066" className="font-mono text-sm font-bold text-white hover:text-[#d4af37] transition-colors flex items-center gap-2">
+                    <Phone className="w-3.5 h-3.5 text-[#d4af37]" />
+                    (876) 470-7066
+                  </a>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Rates, Bookings &amp; Container Tracking</div>
                 </div>
 
                 <div>
-                  <div className="text-slate-300 mb-0.5">Commercial Bookings &amp; Quotes:</div>
-                  <div className="font-mono text-sm font-bold text-[#d4af37] flex items-center gap-2">
-                    <Mail className="w-3.5 h-3.5" />
-                    quotes@hiimpactshipping.com
+                  <div className="text-slate-300 mb-0.5 font-medium">Official Email:</div>
+                  <a href="mailto:hiimpactshipping@outlook.com" className="font-mono text-sm font-bold text-[#d4af37] hover:text-[#f3df8a] transition-colors flex items-center gap-2">
+                    <Mail className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
+                    hiimpactshipping@outlook.com
+                  </a>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Direct rate inquiries &amp; trade documentation</div>
+                </div>
+
+                <div className="pt-2 border-t border-[#172c5a]">
+                  <div className="text-slate-300 mb-0.5 font-medium">Headquarters Location:</div>
+                  <div className="text-sm font-bold text-white flex items-center gap-2">
+                    <MapPin className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
+                    Kingston, Jamaica
                   </div>
+                  <div className="text-[11px] text-slate-400 mt-0.5">Islandwide delivery &amp; global trade lane corridors</div>
                 </div>
               </div>
             </div>
