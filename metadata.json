@@ -1,0 +1,6 @@
+{
+  "name": "Meridian Global Logistics & Shipping",
+  "description": "Leading global shipping and freight forwarding company providing ocean container transport, expedited air freight, multimodal intermodal hauling, and smart warehousing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
