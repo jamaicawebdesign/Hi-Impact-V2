@@ -1,3 +1,8 @@
+import heroOceanImg from '../assets/images/hero_ocean_freight_1791654360420.jpg';
+import heroAirImg from '../assets/images/hero_air_freight_1791654375365.jpg';
+import heroRoadImg from '../assets/images/hero_road_freight_1791654388807.jpg';
+import heroHubImg from '../assets/images/hero_logistics_hub_1791654402278.jpg';
+
 export interface HeroSlide {
   id: string;
   title: string;
@@ -71,7 +76,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'Precision Global Ocean Freight & Container Logistics',
     subtitle: 'Scheduled Liner Services Across 140+ Sovereign Port Terminals',
     description: 'Direct oceanic transit lines with guaranteed vessel space allocations, real-time container IoT tracking, and optimized trade corridor scheduling.',
-    image: '/src/assets/images/hero_ocean_freight_1791654360420.jpg',
+    image: heroOceanImg,
     category: 'Maritime Cargo',
     highlightStat: '4.8M TEU',
     highlightLabel: 'Annual Ocean Volume Handled',
@@ -85,7 +90,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'Expedited Air Freight & Dedicated Charter Solutions',
     subtitle: 'Time-Critical International Air Cargo with 24–48h Transit Windows',
     description: 'Consolidated air cargo networks and dedicated charter flights for high-value machinery, perishables, and mission-critical industrial supply chains.',
-    image: '/src/assets/images/hero_air_freight_1791654375365.jpg',
+    image: heroAirImg,
     category: 'Aviation Logistics',
     highlightStat: '24-48 hrs',
     highlightLabel: 'Express Hub-to-Hub Transit',
@@ -99,7 +104,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'Intermodal Overland Haulage & Cross-Border Freight',
     subtitle: 'Seamless Rail-to-Road Connectivity & Heavy-Duty Fleet Logistics',
     description: 'Nationwide and transcontinental freight hauling powered by telematics-equipped carrier fleets, heavy-lift transport, and temperature-controlled reefer trailers.',
-    image: '/src/assets/images/hero_road_freight_1791654388807.jpg',
+    image: heroRoadImg,
     category: 'Overland Haulage',
     highlightStat: '99.4%',
     highlightLabel: 'On-Time Linehaul Reliability',
@@ -113,7 +118,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     title: 'Smart Automated Warehousing & Cross-Dock Distribution',
     subtitle: 'High-Bay Automated Storage with Real-Time Inventory Visibility',
     description: 'Strategically located bonded warehouses offering automated pick-and-pack, temperature-monitored holding, and expedited port-adjacent cross-docking.',
-    image: '/src/assets/images/hero_logistics_hub_1791654402278.jpg',
+    image: heroHubImg,
     category: 'Contract Logistics',
     highlightStat: '3.2M sq ft',
     highlightLabel: 'Bonded Warehouse Capacity',

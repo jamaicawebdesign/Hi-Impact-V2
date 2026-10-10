@@ -19,6 +19,14 @@ import {
 } from 'lucide-react';
 import { HERO_SLIDES, TRACKING_SAMPLES, ShipmentTrackRecord } from '../data/shippingData';
 
+// High-resolution commercial maritime & logistics imagery fallbacks
+const FALLBACK_SLIDE_IMAGES: Record<string, string> = {
+  'ocean-freight': 'https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=2000&q=85',
+  'air-freight': 'https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=2000&q=85',
+  'road-freight': 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2000&q=85',
+  'logistics-hub': 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000&q=85',
+};
+
 interface HeroSliderProps {
   onSelectServiceQuote?: (serviceId: string) => void;
 }
@@ -130,9 +138,13 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onSelectServiceQuote }) 
               alt={currentSlide.title}
               className="w-full h-full object-cover object-center"
               referrerPolicy="no-referrer"
+              loading="eager"
               onError={(e) => {
-                // Fallback graceful styling if image fails
-                (e.currentTarget as HTMLElement).style.display = 'none';
+                const target = e.currentTarget as HTMLImageElement;
+                const fallback = FALLBACK_SLIDE_IMAGES[currentSlide.id] || FALLBACK_SLIDE_IMAGES['ocean-freight'];
+                if (target.src !== fallback) {
+                  target.src = fallback;
+                }
               }}
             />
           </motion.div>
