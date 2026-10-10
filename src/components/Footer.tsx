@@ -1,5 +1,6 @@
 import React from 'react';
-import { Anchor, ArrowUp, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowUp, Phone, Mail, MapPin } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -16,16 +17,11 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5 text-white mb-4">
-              <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#d4af37] to-[#b89225] text-[#030b1e] flex items-center justify-center font-bold shadow-md shadow-[#d4af37]/20">
-                <Anchor className="w-4 h-4 stroke-[2.5]" />
-              </span>
-              <span className="text-lg font-bold tracking-tight">
-                Hi Impact<span className="text-[#d4af37] ml-1.5 font-semibold">Shipping Co.</span>
-              </span>
+            <div className="mb-4">
+              <Logo variant="footer" />
             </div>
             <p className="text-slate-300 leading-relaxed max-w-sm mb-5 text-xs">
-              Direct ocean container transport, priority air cargo charters, intermodal overland freight, and temperature-controlled cold chain logistics rooted in Jamaican excellence.
+              Reliable, efficient and personalized shipping &amp; customs brokerage solutions. Over 26 years simplifying sending your goods to Jamaica safely and timely.
             </p>
             <div className="text-slate-400 text-[11px] space-y-1">
               <div>FMC Licensed Ocean Transportation Intermediary #024881</div>

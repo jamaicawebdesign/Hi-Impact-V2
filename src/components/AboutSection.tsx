@@ -1,11 +1,5 @@
 import React from 'react';
-import { 
-  ShieldCheck, 
-  Globe2, 
-  Award, 
-  Target, 
-  Compass 
-} from 'lucide-react';
+import { Target, Compass } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -74,96 +68,6 @@ export const AboutSection: React.FC = () => {
               <span className="text-[#d4af37] font-semibold">Transformative Catalyst · Sustainability</span>
               <span className="text-slate-300 font-medium">Shaping the Future 🇯🇲</span>
             </div>
-          </div>
-        </div>
-
-        {/* Quantitative Proof Strip (Claim-to-Proof Adjacency) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 sm:p-8 rounded-xl bg-slate-50 border border-slate-200 mb-16 shadow-sm">
-          <div>
-            <div className="text-3xl sm:text-4xl font-bold text-[#081533] font-mono tabular-nums mb-1">
-              4.8M
-            </div>
-            <div className="text-xs font-bold text-[#b89225] uppercase tracking-wider mb-1">
-              Annual TEU Handled
-            </div>
-            <p className="text-xs text-slate-600">
-              Containerized freight moved across major maritime corridors annually.
-            </p>
-          </div>
-
-          <div>
-            <div className="text-3xl sm:text-4xl font-bold text-[#081533] font-mono tabular-nums mb-1">
-              99.4%
-            </div>
-            <div className="text-xs font-bold text-[#b89225] uppercase tracking-wider mb-1">
-              Liner Schedule Reliability
-            </div>
-            <p className="text-xs text-slate-600">
-              On-time berth arrival rate exceeding international carrier benchmarks.
-            </p>
-          </div>
-
-          <div>
-            <div className="text-3xl sm:text-4xl font-bold text-[#081533] font-mono tabular-nums mb-1">
-              140+
-            </div>
-            <div className="text-xs font-bold text-[#b89225] uppercase tracking-wider mb-1">
-              Direct Port Terminals
-            </div>
-            <p className="text-xs text-slate-600">
-              Global commercial maritime gateways with dedicated terminal berths.
-            </p>
-          </div>
-
-          <div>
-            <div className="text-3xl sm:text-4xl font-bold text-[#081533] font-mono tabular-nums mb-1">
-              &lt; 24h
-            </div>
-            <div className="text-xs font-bold text-[#b89225] uppercase tracking-wider mb-1">
-              Electronic Customs Clearance
-            </div>
-            <p className="text-xs text-slate-600">
-              Pre-arrival electronic manifest filing across US, EU and Asian customs.
-            </p>
-          </div>
-        </div>
-
-        {/* Operational Pillars / Certifications */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-10 h-10 rounded-lg bg-[#d4af37]/15 text-[#b89225] flex items-center justify-center mb-4">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <h4 className="text-base font-bold text-[#081533] mb-2">
-              C-TPAT &amp; AEO Security Certified
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Tier 3 Authorized Economic Operator with validated physical security, electronic container seals, and green-lane customs priority.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-10 h-10 rounded-lg bg-[#d4af37]/15 text-[#b89225] flex items-center justify-center mb-4">
-              <Globe2 className="w-5 h-5" />
-            </div>
-            <h4 className="text-base font-bold text-[#081533] mb-2">
-              IMO 2030 Decarbonization Roadmap
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Committed to 40% carbon intensity reduction via bio-methanol dual-fuel vessels, shore power cold ironing, and electric port drayage.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-10 h-10 rounded-lg bg-[#d4af37]/15 text-[#b89225] flex items-center justify-center mb-4">
-              <Award className="w-5 h-5" />
-            </div>
-            <h4 className="text-base font-bold text-[#081533] mb-2">
-              FMC Licensed &amp; Bonded OTI
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Federal Maritime Commission licensed Non-Vessel Operating Common Carrier (NVOCC) and ocean freight forwarder (OTI #024881).
-            </p>
           </div>
         </div>
 

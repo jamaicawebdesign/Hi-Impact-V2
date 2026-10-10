@@ -55,7 +55,7 @@ export default function App() {
 
       {/* Main Single Page Content */}
       <main className="flex-1 flex flex-col">
-        {/* Section 1: Hero with Slider & Live Tracking Bar */}
+        {/* Section 1: Hero Slider */}
         <HeroSlider onSelectServiceQuote={handleSelectServiceQuote} />
 
         {/* Section 2: About Us & Fleet Infrastructure */}
